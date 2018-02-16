@@ -1,12 +1,8 @@
-html 
-{
-	font-size: 10px;
-	background: url(https://cdn.vectorstock.com/i/thumb-large/11/45/4521145.jpg) bottom center;
-}
 
-h1 
-{ 
-	margin:50px; 
+h1,h3
+{
+	font-weight : bold;
+	margin:50px;
 	border : 5px dotted blue ;
 	padding : 20px ;
 	text-align : center;
@@ -14,23 +10,29 @@ h1
 	background: #f2ffff;
 }
 
-div 
+body
 {
-	
-	margin : 50px;
-	border : 5px solid blue ; 
-	padding : 50px ;
+	background: url(https://cdn.vectorstock.com/i/thumb-large/11/45/4521145.jpg) bottom center;
+}
+
+.container
+{
+	border : 5px dashed blue;
+}
+
+div
+{
 	text-align : center;
 }
 
-scr 
+scr
 {
+	border : 10px inset maroon;
 	margin : 10px ;
-	border : 10px inset maroon ;
 	padding : 10px ;
 	font-weight: bold;
 	text-align : center;
-	width : 100px ; 
+	width : 100px ;
 	height : 100px ;
 	background-color: blue;
 	font-size : 20px;
@@ -38,46 +40,28 @@ scr
 	background: #f2ffff;
 }
 
-h3,h4
+.col-lg-4 p
 {
-	font-size : 20px;
-}
-
-p
-{
+	margin : 20px;
 	font-size: 25px ;
 	color: #000200;
 	font-weight: bold;
 }
 
-player
+image
 {
-	position : absolute;
-	left : 200px;
-	top : 425px;
-}
-computer
-{
-	position : absolute;
-	right : 190px;
-	top : 425px;
+
+	/* text-align: center; */
 }
 
-image 
+.choose
 {
-	position : absolute;
-	text-align: center;
-}
-
-.choose 
-{
+	font-weight: bold;
 	width: 100px; height: 40px;
 	text-align: center;
-	margin : 30px ; 
+	margin : 30px ;
 	border-color : maroon;
-	border-radius : 10px ; 
+	border-radius : 10px ;
 	color: #000200;
 	background : #f2ffff;
-}	
-
-
+}

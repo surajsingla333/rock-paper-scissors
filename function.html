@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Rock_Paper_scissors</title>
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+
+	<div class="container-fluid">
 	<h1> Rock-Paper-Scissors</h1>
+</div>
 
-	<div>
-	
-	<button class = "choose" , value = "rock"> ROCK </button>
-	<button class = "choose" , value = "paper"> PAPER </button>
-	<button class = "choose" , value = "scissors"> SCISSORS </button>
-	<script src="script/main2.js"></script>
-	<h3>NEW GAME</h3>
+	<div class="container">
+		<div class="row">
+		<click>
+			<button class = "choose" , value = "rock"> ROCK </button>
+			<button class = "choose" , value = "paper"> PAPER </button>
+			<button class = "choose" , value = "scissors"> SCISSORS </button>
+		</click>
+		<script src="script/main2.js"></script>
+	</div>
 
-	<display>
-	<player>
+	<div class="row">
+	<div class="col-lg-4">
 	<scr id = "uScore"> 0 </scr>
 		<p> YOUR SCORE </p>
-	</player>
-		<image>
+	</div>
+		<div class="col-lg-4">
 			<img src = "styles/hello.png" id = showEmoji>
-			<h4></h4>
-		</image>
-	<computer>
+			<h3>NEW GAME</h3>
+		</div>
+	<div class="col-lg-4">
 	<scr id = "compScore"> 0 </scr>
 		<p> COMPUTER SCORE </p>
-	</computer>	
-	</display>
+	</div>
+</div>
 	</div>
 </body>
 </html>
