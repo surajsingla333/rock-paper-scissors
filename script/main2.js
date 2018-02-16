@@ -4,7 +4,7 @@ let option ;
 const playerChoice = document.querySelectorAll('.choose');
 playerChoice.forEach( (button) => {
 	 button.addEventListener('click', () => {
-
+		 hidden = null;
 	 option = button.value ;
 	 playRound(option); })
 }) ;
@@ -34,8 +34,8 @@ function playRound(playerSelection , computerSelection)
 
 	computerSelection = computerPlay();
 	let result ;
-	// let head = document.querySelector('h3');
-	//     head.textContent = null;
+	let head = document.querySelector('h4');
+	    head.textContent = null;
 
    	if((playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") || (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper") || (playerSelection.toLowerCase() == "paper" && computerSelection == "rock"))
 	{
@@ -44,6 +44,7 @@ function playRound(playerSelection , computerSelection)
 
 		image.setAttribute('src' , 'styles/happy.png');
 		res.textContent = "YOU WIN!" ;
+		head.textContent = playerSelection + " beats " + computerSelection;
 	}
 
 	else if(playerSelection.toLowerCase() == computerSelection)
@@ -51,13 +52,15 @@ function playRound(playerSelection , computerSelection)
 		result = "It's a DRAW.."
 		image.setAttribute('src' , 'styles/blank.png');
 		res.textContent = "IT'S A DRAW!"
+		head.textContent = "both choose " + playerSelection ;
 	}
 	else
 	{
 		result = " You LOSE.. " + computerSelection + " beats " + playerSelection + " .." ;
 		youLose = ++youLose ;
 		image.setAttribute('src' , 'styles/sad.png');
-		res.textContent = "YOU LOSE!"
+ 		res.textContent = "YOU LOSE!"
+		head.textContent = computerSelection + " beats " + playerSelection;
 	}
 
 
@@ -74,6 +77,7 @@ function playRound(playerSelection , computerSelection)
 	  score.textContent = 0
 	  compScore.textContent = 0
 	  image.setAttribute('src' , 'styles/hello.png');
+		head.textContent = "-";
 	}
 	else if (youLose >= 5)
 	{ alert("A.I. IS THE BEST AFTERALL!!!!");
@@ -82,21 +86,8 @@ function playRound(playerSelection , computerSelection)
 	  score.textContent = 0
 	  compScore.textContent = 0
 	  image.setAttribute('src' , 'styles/hello.png');
+		head.textContent = "-";
 	}
 
 	return result;
 }
-
-/*function game()
-{
-	youWin = 0 ; youLose = 0;
-	let para = document.querySelector('p')
-	for(i=1 ; i<=5 ; i++)
-	{
-		playRound(playerSelection = prompt() , computerPlay()) ;
-		para.textContent = para.textContent + " </br> " + " choice " + i + " is " + playerSelection + " ." ;
-	}
-	if (youWin > youLose) return "You\'re the Winner with " + youWin + " wins...";
-	else if (youWin < youLose) return "You\'re the Losser with " + youLose + " losses...";
-	else return "It's a Draw..."
-}*/

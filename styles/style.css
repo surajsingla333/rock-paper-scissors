@@ -1,13 +1,21 @@
 
-h1,h3
+h1,h3,h4
 {
 	font-weight : bold;
-	margin:50px;
+	margin:30px;
 	border : 5px dotted blue ;
 	padding : 20px ;
 	text-align : center;
 	font-size : 30px;
 	background: #f2ffff;
+}
+
+h4
+{
+	font-weight :lighter;
+	font-style: italic;
+	border : 3px dotted blue ;
+	font-size : 20px;
 }
 
 body
